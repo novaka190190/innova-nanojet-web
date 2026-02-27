@@ -103,3 +103,9 @@ Studie ukazují, že filtrování vzduchu přímo v ložnici (kde trávíte 7–
 6. **Navštivte alergologa** — imunologická léčba (sublinguální nebo injekční) může alergii výrazně zmírnit
 
 Žít s alergií není přijatelný osud. S kombinací správných opatření si většina alergiků výrazně zlepší kvalitu života — a kvalita vzduchu v bytě je klíčovým článkem.
+
+## Související články
+
+- [Máte čističku vzduchu a alergie nepomáhá?](/blog/cisticka-vzduchu-alergie-nepomaha/)
+- [Jak zlepšit kvalitu vzduchu doma](/blog/jak-zlepsit-kvalitu-vzduchu-doma/)
+- [Čistička vzduchu bez filtrů: Jak funguje?](/blog/cisticka-vzduchu-bez-filtru-jak-funguje/)

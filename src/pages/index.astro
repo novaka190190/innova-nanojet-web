@@ -7,28 +7,35 @@ const structuredData = {
     {
       "@type": "Organization",
       "@id": "https://innova-nanojet.cz/#organization",
-      "name": "Inovara Trade",
+      "name": "Inovara Group s.r.o.",
       "url": "https://innova-nanojet.cz",
       "email": "info@inovaratrade.com",
-      "description": "Oficiální distributor AirSancta CDa Pro pro ČR a SR"
+      "sameAs": ["https://www.inovaratrade.com"],
+      "description": "Oficiální distributor AirSancta CDa Pro pro střední a východní Evropu"
     },
     {
       "@type": "Product",
       "@id": "https://innova-nanojet.cz/#product",
       "name": "AirSancta CDa Pro",
-      "description": "Revoluční čistička vzduchu bez filtrů s patentovanou NanoJet technologií. Používá pouze vodu k zachycení virů, bakterií, alergenů a prachu.",
+      "description": "Čistička vzduchu bez filtrů s patentovanou NanoJet technologií. Čistí vzduch vodní nano-mlhou za 2–5 minut. Odstraní 99 % virů, bakterií a alergenů. Bez chemie, bez filtrů.",
       "brand": {
         "@type": "Brand",
         "name": "AirSancta"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Innova NanoJet Technologies Ltd",
+        "url": "https://www.innova-nanojet.co.uk"
       },
       "image": "https://innova-nanojet.cz/images/product-cda-pro.jpg",
       "offers": {
         "@type": "Offer",
         "availability": "https://schema.org/InStock",
-        "priceCurrency": "CZK",
+        "price": "1359",
+        "priceCurrency": "EUR",
         "seller": {
           "@type": "Organization",
-          "name": "Inovara Trade"
+          "name": "Inovara Group s.r.o."
         }
       }
     },
@@ -38,18 +45,66 @@ const structuredData = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Je CDa Pro čistička nebo zvlhčovač?",
+          "name": "Jaký je rozdíl mezi čističkou vzduchu a zvlhčovačem?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "CDa Pro je primárně čistička vzduchu. Díky principu vodní mlhy ale přirozeně zvlhčuje vzduch, což je bonus zejména v zimě při vytápění."
+            "text": "Čistička odstraňuje nečistoty, zvlhčovač přidává vlhkost. CDa Pro díky principu vodní nano-mlhy dělá obojí — čistí vzduch a zároveň ho přirozeně zvlhčuje. V zimě při vytápění je to zásadní výhoda."
           }
         },
         {
           "@type": "Question",
-          "name": "Musím kupovat náhradní filtry?",
+          "name": "Pomůže CDa Pro proti cigaretovému kouři od sousedů?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ne. CDa Pro je kompletně bez filtrů. Používá pouze destilovanou vodu, což výrazně snižuje provozní náklady."
+            "text": "Ano. Nano-kapky fyzicky zachycují částice kouře a pachové molekuly a sráží je k zemi. CDa Pro je účinná i proti VOC (těkavým organickým látkám), které jsou hlavní složkou cigaretového kouře."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kolik stojí výměna filtrů u běžné čističky vzduchu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Běžné HEPA filtry stojí 500–2 000 Kč za kus a mění se každých 3–6 měsíců. Ročně to vyjde na 2 000–8 000 Kč. CDa Pro žádné filtry nemá — jediný provozní náklad je destilovaná voda."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Nepoškodí nano-mlha elektroniku, papíry nebo nábytek?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ne. Kapky jsou tak mikroskopické (5–10 µm), že se odpařují přímo ve vzduchu. Neusazují se na površích, nezvlhčují elektroniku ani dokumenty. To je zásadní rozdíl oproti klasickým zvlhčovačům."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Musím přístroj nechat běžet celý den?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vůbec ne. Stačí CDa Pro pustit na 2–5 minut a vzduch je čistý až 6 hodin. Zapněte ji třeba když si odskočíte na záchod nebo na oběd — a vrátíte se do čisté místnosti."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jak hlučný je přístroj?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hlučnost je do 80 dB, podobně jako vysavač. Klíčový rozdíl: CDa Pro stačí pustit na 2–5 minut, ne na celý den. Zapněte ji na chvíli, když opouštíte místnost, a vrátíte se do tiché, čisté místnosti."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Je CDa Pro ekologická?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Maximálně. Neprodukuje žádný odpad z filtrů, nepoužívá chemikálie. Jediným spotřebním materiálem je destilovaná voda."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Je CDa Pro bezpečná pro děti a domácí zvířata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ano. Přístroj nepoužívá žádné chemikálie — pouze čistou vodu. Chemicky neutrální princip je bezpečný za přítomnosti celé rodiny."
           }
         },
         {
@@ -59,46 +114,6 @@ const structuredData = {
             "@type": "Answer",
             "text": "Pouze destilovanou nebo demineralizovanou vodu. Nepoužívejte kohoutkovou vodu — mohlo by dojít k ucpání trysek."
           }
-        },
-        {
-          "@type": "Question",
-          "name": "Je bezpečná pro děti a domácí zvířata?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ano. Přístroj nepoužívá žádné chemikálie — pouze čistou vodu. UV modul dezinfikuje vodu v nádrži před rozstřikem."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Jak hlučný je přístroj?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Hlučnost je přibližně 75–80 dB, podobně jako vysavač. Doporučujeme použít časovač a nechat přístroj pracovat v zavřené místnosti."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Může způsobit vlhkost nebo plísně?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Množství rozstřikované vody je minimální (35 ml/min). V místnostech bez existujících problémů s vlhkostí přístroj plísně nezpůsobuje."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Jak CDa Pro čistí vzduch od virů?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Nano-kapky vody fyzicky obalí virové částice ve vzduchu, ztíží je a způsobí jejich pád. Tento princip byl ověřen nezávislými testy."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Kolik stojí provoz?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Provozní náklady jsou minimální — potřebujete pouze destilovanou vodu a elektřinu. Žádné filtry, žádné chemikálie."
-          }
         }
       ]
     }
@@ -107,21 +122,23 @@ const structuredData = {
 ---
 
 <BaseLayout
-  title="AirSancta CDa Pro — Čistička vzduchu bez filtrů | innova-nanojet.cz"
-  description="Čistý vzduch pro váš domov i kancelář. AirSancta CDa Pro — revoluční čistička vzduchu bez filtrů s NanoJet technologií. Odstraňuje 99 % virů, bakterií a alergenů. Distributor pro ČR a SR."
+  title="Čistička vzduchu bez filtrů | Čištění vzduchu vodou za 2 minuty | innova-nanojet.cz"
+  description="AirSancta CDa Pro — inovativní čistička vzduchu bez filtrů a chemie. Čistí vzduch vodní nano-mlhou za 2–5 minut. Odstraní 99 % virů, bakterií a alergenů. Buďte mezi prvními v ČR."
 >
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
   <!-- NAVIGACE -->
-  <nav class="nav">
+  <nav class="nav" id="nav">
     <div class="nav__inner container">
       <a href="/" class="nav__logo">
-        <img src="/images/airsancta-logo.png" alt="AirSancta logo" width="140" height="40" />
+        <img src="/images/airsancta-logo.png" alt="AirSancta logo" width="140" height="40" loading="eager" />
       </a>
       <ul class="nav__links">
-        <li><a href="#jak-to-funguje">Technologie</a></li>
+        <li><a href="#jak-to-funguje">Jak to funguje</a></li>
+        <li><a href="#srovnani">Srovnání</a></li>
         <li><a href="#pro-koho">Pro koho</a></li>
         <li><a href="#vlastnosti">Vlastnosti</a></li>
+        <li><a href="#napsali-o-nas">Napsali o nás</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="#kontakt" class="btn btn-primary">Kontakt</a></li>
@@ -135,35 +152,36 @@ const structuredData = {
   <!-- HERO -->
   <section class="hero" id="hero">
     <div class="hero__bg">
-      <img src="/images/hero.jpg" alt="AirSancta CDa Pro čistička vzduchu v moderním interiéru" width="1920" height="1080" />
+      <img src="/images/hero.jpg" alt="AirSancta CDa Pro čistička vzduchu bez filtrů v moderním interiéru" width="1920" height="1080" loading="eager" />
       <div class="hero__overlay"></div>
     </div>
     <div class="hero__content container">
       <div class="hero__badge">
-        <img src="/images/ces-award.png" alt="CES Innovation Award" width="80" height="80" />
-        <span>Ocenění CES Innovation</span>
+        <img src="/images/ces-award.png" alt="CES Innovation Award" width="80" height="80" loading="eager" />
+        <span>Ocenění CES Innovation Award</span>
       </div>
-      <h1 class="hero__title">Čistý vzduch pro váš<br />domov i kancelář</h1>
+      <h1 class="hero__title">Čistička vzduchu bez filtrů —<br />vyčistí místnost za 2 minuty</h1>
       <p class="hero__subtitle">
-        AirSancta CDa Pro — revoluční čistička vzduchu bez filtrů.<br />
-        Používá pouze vodu. Žádná chemie. Žádné filtry.
+        AirSancta CDa Pro je první čistička vzduchu v ČR, která používá pouze vodu.
+        Žádné filtry, žádná chemie, žádný odpad.
+        Těžce inovativní technologie, kterou si můžete vyzkoušet jako jedni z prvních.
       </p>
       <div class="hero__actions">
-        <a href="#kontakt" class="btn btn-primary">Chci více informací</a>
+        <a href="#kontakt" class="btn btn-primary">Chci vyzkoušet jako první</a>
         <a href="#jak-to-funguje" class="btn btn-outline">Jak to funguje?</a>
       </div>
       <div class="hero__stats">
         <div class="hero__stat">
+          <strong>2–5 min</strong>
+          <span>Vyčistí vzduch v místnosti</span>
+        </div>
+        <div class="hero__stat">
           <strong>99 %</strong>
-          <span>odstranění znečišťujících látek</span>
+          <span>Odstranění nečistot</span>
         </div>
         <div class="hero__stat">
-          <strong>120 m²</strong>
-          <span>pokrytá plocha</span>
-        </div>
-        <div class="hero__stat">
-          <strong>0 ks</strong>
-          <span>náhradních filtrů</span>
+          <strong>0 Kč</strong>
+          <span>Náklady na filtry ročně</span>
         </div>
       </div>
     </div>
@@ -179,10 +197,11 @@ const structuredData = {
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Technologie</span>
-        <h2 class="section-title">Jak funguje technologie NanoJet?</h2>
+        <h2 class="section-title">Jak funguje čištění vzduchu vodní nano-mlhou?</h2>
         <p class="section-subtitle">
-          Na rozdíl od klasických čističek s HEPA filtry používá CDa Pro pouze vodu.
-          Žádné drahé výměny filtrů, žádné chemikálie.
+          Zatímco klasické čističky nasávají vzduch přes filtr a doufají, že zachytí co nejvíc,
+          CDa Pro funguje úplně jinak. Aktivně vysílá do prostoru biliony nano-kapek vody,
+          které loví nečistoty přímo ve vzduchu — a to za pouhé 2–5 minut.
         </p>
       </div>
 
@@ -199,8 +218,8 @@ const structuredData = {
             </svg>
           </div>
           <div class="step__num">1</div>
-          <h3>Biliony nano-kapek</h3>
-          <p>Přístroj generuje biliony ultrarychlých nano-vodních kapek, které zaplní celou místnost.</p>
+          <h3>Biliony nano-kapek vody</h3>
+          <p>Přístroj vytvoří biliony mikroskopických vodních kapek, které se rozletí do celé místnosti. Jsou tisíckrát menší než kapky z běžného zvlhčovače.</p>
         </div>
         <div class="step__arrow">→</div>
         <div class="step">
@@ -214,7 +233,7 @@ const structuredData = {
           </div>
           <div class="step__num">2</div>
           <h3>Zachycení a eliminace</h3>
-          <p>Kapky zachytí viry, bakterie, alergeny a prach ve vzduchu a obalí je ve vodě.</p>
+          <p>Nano-kapky obalí viry, bakterie, alergeny i pachové molekuly přímo ve vzduchu. Funguje to i na částice menší než 300 nanometrů — tedy i na chřipku nebo koronavirus.</p>
         </div>
         <div class="step__arrow">→</div>
         <div class="step">
@@ -227,31 +246,121 @@ const structuredData = {
           </div>
           <div class="step__num">3</div>
           <h3>Čistý vzduch za minuty</h3>
-          <p>Kontaminanty ztěžknou a klesnou — vzduch je čistý během minut. Přirozeně, bez chemie.</p>
+          <p>Obalené nečistoty ztěžknou a klesnou k zemi. Vzduch je čistý za 2–5 minut a zůstává dezinfikovaný až 6 hodin. A kapky jsou tak jemné, že nezvlhčí elektroniku ani papíry.</p>
         </div>
       </div>
 
       <div class="how-it-works__visual">
         <div class="how-it-works__image">
-          <img src="/images/nanojet-diagram.png" alt="Diagram technologie NanoJet — jak nano-kapky čistí vzduch" width="600" height="400" />
+          <img src="/images/nanojet-diagram.png" alt="Diagram technologie NanoJet — srovnání běžného spreje a nano-kapek" width="600" height="400" loading="lazy" />
+          <p class="diagram-caption">
+            Srovnání běžného spreje (vlevo) a technologie NanoJet (vpravo).
+            NanoJet vytváří kapky tisíckrát menší, které se neusazují na površích,
+            ale aktivně čistí vzduch v celé místnosti.
+          </p>
         </div>
         <div class="how-it-works__text">
-          <h3>Patentovaná fyzikální metoda</h3>
+          <h3>Vojenský původ. Civilní nasazení od 2024.</h3>
           <p>
-            NanoJet technologie využívá čistě fyzikální princip bez jakýchkoli chemických přísad.
-            Průmyslová tryska rozprašuje vodu na ultra-miniaturní kapky o velikosti 5–10 mikronů,
-            které jsou 1000× menší než kapky z klasického zvlhčovače.
+            Tato technologie byla původně vyvíjena pro vojenský průmysl v oblasti biologické
+            a chemické obrany. Na civilní trh vstoupila v roce 2024 a je chráněna patenty
+            (US 63/531 044, PCT/US24/25231).
           </p>
           <p>
-            Tyto kapky mají obrovský celkový povrch, díky čemuž jsou extrémně efektivní
-            při zachycování aerosolových částic, virů a bakterií z okolního vzduchu.
+            Průmyslová tryska rozprašuje vodu na kapky o velikosti 5–10 mikronů —
+            tisíckrát menší než kapky z klasického zvlhčovače.
+            Tyto kapky mají mimořádně velký povrch, díky čemuž jsou velmi účinné
+            při zachycování aerosolových částic, virů a bakterií.
           </p>
           <ul class="check-list">
-            <li>Ověřeno nezávislými laboratořemi</li>
-            <li>Ocenění CES Innovation Award</li>
-            <li>Patentovaná technologie innova-nanojet</li>
+            <li>Ověřeno nezávislými laboratořemi (LMS Technologies USA, NHS UK)</li>
+            <li>Reference: Nemocnice Strakonice, NHS Health Innovation NWC</li>
+            <li>Patentovaná technologie — certifikace CE, UKCA</li>
           </ul>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SROVNÁNÍ -->
+  <section class="comparison" id="srovnani">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Srovnání</span>
+        <h2 class="section-title">Proč jsou klasické čističky s HEPA filtrem nedostatečné?</h2>
+        <p class="section-subtitle">
+          HEPA filtry jsou prověřená technologie — ale mají zásadní limity, o kterých výrobci neradi mluví.
+        </p>
+      </div>
+
+      <div class="comparison-table-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="highlight-col">CDa Pro<br/><small>(vodní nano-mlha)</small></th>
+              <th>HEPA čistička</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Princip</td>
+              <td class="highlight-col"><strong>Aktivně vysílá nano-kapky do prostoru</strong></td>
+              <td>Pasivně nasává vzduch přes filtr</td>
+            </tr>
+            <tr>
+              <td>Rychlost čištění</td>
+              <td class="highlight-col"><strong>2–5 minut</strong></td>
+              <td>Hodiny nepřetržitého provozu</td>
+            </tr>
+            <tr>
+              <td>Zachycení virů pod 300 nm</td>
+              <td class="highlight-col"><strong>Ano</strong> (od 10 nm)</td>
+              <td>Ne — HEPA zachycuje od 300 nm výš</td>
+            </tr>
+            <tr>
+              <td>Riziko rozšiřování virů</td>
+              <td class="highlight-col"><strong>Ne</strong> — sráží je dolů</td>
+              <td>Ano — ventilátor je může rozhánět po místnosti</td>
+            </tr>
+            <tr>
+              <td>Náklady na filtry ročně</td>
+              <td class="highlight-col"><strong>0 Kč</strong></td>
+              <td>2 000–8 000 Kč (výměna 2–4× ročně)</td>
+            </tr>
+            <tr>
+              <td>Odpad z filtrů</td>
+              <td class="highlight-col"><strong>Žádný</strong></td>
+              <td>2–4 filtry ročně (potenciálně nebezpečný odpad)</td>
+            </tr>
+            <tr>
+              <td>Zvlhčování vzduchu</td>
+              <td class="highlight-col"><strong>Ano</strong>, přirozeně</td>
+              <td>Ne</td>
+            </tr>
+            <tr>
+              <td>Odstranění pachů a VOC</td>
+              <td class="highlight-col"><strong>Ano</strong></td>
+              <td>Částečně (jen s uhlíkovým filtrem)</td>
+            </tr>
+            <tr>
+              <td>Bezpečnost pro elektroniku</td>
+              <td class="highlight-col"><strong>Ano</strong> — kapky se odpařují ve vzduchu</td>
+              <td>Ano</td>
+            </tr>
+            <tr>
+              <td>Doba potřebného provozu</td>
+              <td class="highlight-col"><strong>2–5 min</strong>, účinek trvá až 6 hodin</td>
+              <td>Celý den pro trvalý efekt</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="comparison-note">
+        <strong>Nejdůležitější rozdíl?</strong> I ty nejjemnější HEPA filtry nedokáží zachytit běžné respirační viry,
+        jako je chřipka nebo Covid-19. Jejich ventilátor navíc může virové částice rozšiřovat po místnosti.
+        CDa Pro funguje opačně — nano-kapky viry obalí a srazí k zemi.
       </div>
     </div>
   </section>
@@ -261,42 +370,47 @@ const structuredData = {
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Využití</span>
-        <h2 class="section-title">Pro koho je AirSancta CDa Pro</h2>
+        <h2 class="section-title">Pro koho je čistička vzduchu bez filtrů ideální?</h2>
         <p class="section-subtitle">Přístroj je vhodný všude tam, kde záleží na kvalitě vzduchu a zdraví lidí.</p>
       </div>
 
-      <div class="cards-grid">
+      <div class="cards-grid cards-grid--5">
         <div class="card">
           <div class="card__icon">🏠</div>
           <h3>Domácnosti</h3>
-          <p>Zlepšete kvalitu vzduchu v obýváku, ložnici nebo dětském pokoji. Ideální pro rodiny s malými dětmi.</p>
+          <p>Čistější vzduch v obýváku, ložnici i dětském pokoji. Konec se suchým vzduchem v zimě, prachem v paneláku nebo pachy z vaření. Jedno zařízení snadno přesunete díky kolečkům.</p>
         </div>
         <div class="card">
           <div class="card__icon">🏢</div>
-          <h3>Kanceláře</h3>
-          <p>Snižte šíření virů a zvyšte produktivitu zaměstnanců. Čistší vzduch = méně nemocných dní.</p>
+          <h3>Kanceláře a firmy</h3>
+          <p>Méně nemocných dní, vyšší produktivita. CDa Pro řeší syndrom nemocných budov v open space kancelářích — stačí ji pustit na 5 minut před začátkem pracovní doby.</p>
         </div>
         <div class="card">
           <div class="card__icon">🌿</div>
-          <h3>Alergici</h3>
-          <p>Rychle odstraňte pyly, roztoče a další alergeny. Uleva od sezónních i celoročních alergií.</p>
+          <h3>Alergici a astmatici</h3>
+          <p>Když vám běžná čistička s HEPA filtrem nestačí. CDa Pro zachycuje i ty nejjemnější alergeny — pyly, roztoče, spóry plísní — a navíc vzduch přirozeně zvlhčuje.</p>
         </div>
         <div class="card">
           <div class="card__icon">🏨</div>
-          <h3>Hotely & restaurace</h3>
-          <p>Profesionální čištění vzduchu pro vaše hosty. Eliminace pachů z kuchyně a cigaretového kouře.</p>
+          <h3>Hotely, restaurace, zdravotnictví</h3>
+          <p>Profesionální řešení pro prostory, kde kvalita vzduchu přímo ovlivňuje spokojenost hostů nebo zdraví pacientů. Používá ji Nemocnice Strakonice — vítěz ocenění Nejlepší nemocnice 2024.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🏫</div>
+          <h3>Školy a školky</h3>
+          <p>Méně nemocných dětí, lepší soustředění, nižší absence. CDa Pro stačí pustit ráno na 5 minut před příchodem žáků — a třída je připravena na celý den.</p>
         </div>
       </div>
 
       <div class="product-showcase">
         <div class="product-showcase__image">
-          <img src="/images/lifestyle-dog.jpg" alt="AirSancta CDa Pro v domácnosti se psem — bezpečná pro domácí zvířata" width="600" height="500" />
+          <img src="/images/lifestyle-dog.jpg" alt="AirSancta CDa Pro v domácnosti se psem — bezpečná pro domácí zvířata" width="600" height="500" loading="lazy" />
         </div>
         <div class="product-showcase__content">
-          <h3>Bezpečná pro celou rodinu</h3>
+          <h3>Bezpečná za přítomnosti celé rodiny</h3>
           <p>CDa Pro nepoužívá žádné chemikálie — pouze čistou destilovanou vodu. Je proto naprosto bezpečná pro děti, seniory i domácí zvířata.</p>
-          <p>UV modul navíc dezinfikuje vodu v nádrži ještě před rozstřikem, takže do vzduchu se dostává skutečně čistá voda.</p>
-          <a href="#kontakt" class="btn btn-primary">Zjistit více</a>
+          <p>Na rozdíl od UV dezinfekce nebo chemického mlžení může CDa Pro pracovat v místnosti s lidmi. Chemicky neutrální — jen voda.</p>
+          <a href="#kontakt" class="btn btn-primary">Chci vyzkoušet jako první</a>
         </div>
       </div>
     </div>
@@ -307,11 +421,11 @@ const structuredData = {
     <div class="container">
       <div class="features__inner">
         <div class="features__image">
-          <img src="/images/product-cda-pro.jpg" alt="AirSancta CDa Pro — detail produktu" width="500" height="600" />
+          <img src="/images/product-cda-pro.jpg" alt="AirSancta CDa Pro — čistička vzduchu bez filtrů" width="500" height="600" loading="lazy" />
         </div>
         <div class="features__content">
           <span class="section-tag">Specifikace</span>
-          <h2 class="section-title">Co dělá CDa Pro výjimečnou</h2>
+          <h2 class="section-title">Co dělá CDa Pro tak odlišnou od všeho, co znáte</h2>
           <ul class="features__list">
             <li>
               <svg class="check-icon" viewBox="0 0 24 24" fill="none">
@@ -319,8 +433,8 @@ const structuredData = {
                 <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               <div>
-                <strong>Patentovaná NanoJet technologie</strong>
-                <span>Jedinečný fyzikální princip čištění vzduchu</span>
+                <strong>Patentovaná NanoJet technologie — původně vyvinutá pro vojenskou obranu</strong>
+                <span>Patent US 63/531 044, PCT/US24/25231</span>
               </div>
             </li>
             <li>
@@ -329,8 +443,8 @@ const structuredData = {
                 <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               <div>
-                <strong>Bez filtrů — používá pouze vodu</strong>
-                <span>Žádné drahé výměny filtrů každé 3 měsíce</span>
+                <strong>Bez filtrů, bez chemie — pracuje výhradně s destilovanou vodou</strong>
+                <span>0 Kč ročně za filtry, žádný nebezpečný odpad</span>
               </div>
             </li>
             <li>
@@ -339,8 +453,8 @@ const structuredData = {
                 <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               <div>
-                <strong>Odstranění 99 % znečišťujících látek</strong>
-                <span>Viry, bakterie, plísně, alergeny, prach, VOC</span>
+                <strong>99% účinnost — ověřeno nezávislými laboratořemi</strong>
+                <span>LMS Technologies USA, NHS Health Innovation NWC</span>
               </div>
             </li>
             <li>
@@ -349,8 +463,8 @@ const structuredData = {
                 <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               <div>
-                <strong>Bez chemikálií — čistě fyzikální princip</strong>
-                <span>Bezpečné pro děti, seniory i domácí zvířata</span>
+                <strong>Zachycuje i viry pod 300 nm — tam, kde HEPA filtry selhávají</strong>
+                <span>Chřipka, koronavirus i další respirační viry</span>
               </div>
             </li>
             <li>
@@ -359,8 +473,8 @@ const structuredData = {
                 <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               <div>
-                <strong>Nízká spotřeba energie</strong>
-                <span>Efektivní provoz s minimálními náklady</span>
+                <strong>Vyčistí místnost za 2–5 minut — ne za hodiny jako běžné čističky</strong>
+                <span>NHS test: 2× rychlejší než kontrolní podmínky</span>
               </div>
             </li>
             <li>
@@ -369,8 +483,8 @@ const structuredData = {
                 <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               <div>
-                <strong>UV dezinfekce vody v nádrži</strong>
-                <span>Voda je dezinfikována UV světlem před každým rozstřikem</span>
+                <strong>Účinek trvá až 6 hodin po aplikaci</strong>
+                <span>Dezinfikovaný vzduch dlouho po vypnutí přístroje</span>
               </div>
             </li>
             <li>
@@ -379,8 +493,8 @@ const structuredData = {
                 <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               <div>
-                <strong>Vhodná pro prostory do 120 m²</strong>
-                <span>Pokryje obývací pokoj, kancelář i větší místnosti</span>
+                <strong>Nano-kapky nezvlhčují povrchy — bezpečné pro elektroniku i dokumenty</strong>
+                <span>Kapky se odpařují ve vzduchu, neusazují se na površích</span>
               </div>
             </li>
             <li>
@@ -389,12 +503,97 @@ const structuredData = {
                 <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               <div>
-                <strong>Provoz cca 45 minut na jednu nádrž (1,8 l)</strong>
-                <span>Dostatečně dlouhé cykly pro efektivní čištění</span>
+                <strong>Kolečka a výsuvná rukojeť — snadno přesunete mezi místnostmi</strong>
+                <span>Hmotnost 22,7 kg, rozměry 345 × 300 × 740 mm</span>
+              </div>
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" fill="#2196F3"/>
+                <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <strong>Wi-Fi a časovač — přednastavte provoz před příchodem do kanceláře</strong>
+                <span>LCD displej monitoruje teplotu a vlhkost v místnosti</span>
               </div>
             </li>
           </ul>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CENA -->
+  <section class="price-section">
+    <div class="container">
+      <div class="price-box">
+        <div class="price-box__content">
+          <h3>Doporučená cena CDa Pro: <strong>1 359 EUR</strong> <span>(cca 34 000 Kč)</span></h3>
+          <p>Kontaktujte nás pro individuální nabídku, možnost předvedení nebo firemní množstevní slevy.</p>
+        </div>
+        <a href="#kontakt" class="btn btn-primary">Chci individuální nabídku</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NAPSALI O NÁS -->
+  <section class="press" id="napsali-o-nas">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Média</span>
+        <h2 class="section-title">Napsali o nás</h2>
+        <p class="section-subtitle">Technologie AirSancta CDa Pro si všimla přední česká i zahraniční média.</p>
+      </div>
+
+      <div class="press__grid">
+        <a
+          href="https://strakonicky.denik.cz/zpravy_region/strakonice-nemocnice-unikatni-cisticku-vzduchu-evropa-cdapro-innova-nanojet-2025.html"
+          class="press__card"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="press__media">Deník.cz</div>
+          <h3>Strakonická nemocnice má unikátní čističku vzduchu</h3>
+          <p>Nemocnice Strakonice jako jedna z prvních v Evropě nasadila technologii CDa Pro — a získala ocenění Nejlepší nemocnice 2024.</p>
+          <span class="press__link">Číst článek →</span>
+        </a>
+
+        <a
+          href="https://www.novinky.cz/clanek/internet-a-pc-ifa-2024-zatoci-i-s-koronavirem-chytra-cisticka-jezdi-po-budove-sama-40487480"
+          class="press__card"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="press__media">Novinky.cz</div>
+          <h3>Chytrá čistička zatočí i s koronavirem</h3>
+          <p>Na veletrhu IFA 2024 zaujala technologie NanoJet svým přístupem — zachycuje i viry, kde HEPA filtry nestačí.</p>
+          <span class="press__link">Číst článek →</span>
+        </a>
+
+        <a
+          href="https://www.nextech.sk/a/Revolucna-technologia-cisti-vzduch-aj-bez-filtrov"
+          class="press__card"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="press__media">Nextech.sk</div>
+          <h3>Revolučná technológia čistí vzduch aj bez filtrov</h3>
+          <p>Slovenský technologický portál Nextech podrobně rozebírá princip vodní nano-mlhy a srovnává ji s klasickými filtračními čističkami.</p>
+          <span class="press__link">Číst článek →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUĎTE PRVNÍ -->
+  <section class="first-cta">
+    <div class="container">
+      <div class="first-cta__inner">
+        <div>
+          <h2>Buďte mezi prvními v ČR, kdo si tuto technologii vyzkouší</h2>
+          <p>Inovativní produkt dostupný v ČR od roku 2025. Chcete být u toho? Napište nám.</p>
+        </div>
+        <a href="#kontakt" class="btn btn-primary">Kontaktujte nás</a>
       </div>
     </div>
   </section>
@@ -410,36 +609,58 @@ const structuredData = {
 
       <div class="faq__list">
         <details class="faq__item">
-          <summary>Je CDa Pro čistička nebo zvlhčovač?</summary>
-          <p>CDa Pro je primárně čistička vzduchu. Díky principu vodní mlhy ale přirozeně zvlhčuje vzduch, což je bonus zejména v zimě při vytápění.</p>
+          <summary>Jaký je rozdíl mezi čističkou vzduchu a zvlhčovačem?</summary>
+          <div class="faq__answer">
+            <p>Čistička odstraňuje nečistoty, zvlhčovač přidává vlhkost. CDa Pro díky principu vodní nano-mlhy dělá obojí — čistí vzduch a zároveň ho přirozeně zvlhčuje. V zimě při vytápění je to zásadní výhoda.</p>
+          </div>
         </details>
         <details class="faq__item">
-          <summary>Musím kupovat náhradní filtry?</summary>
-          <p>Ne. CDa Pro je kompletně bez filtrů. Používá pouze destilovanou vodu, což výrazně snižuje provozní náklady.</p>
+          <summary>Pomůže CDa Pro proti cigaretovému kouři od sousedů?</summary>
+          <div class="faq__answer">
+            <p>Ano. Nano-kapky fyzicky zachycují částice kouře a pachové molekuly a sráží je k zemi. CDa Pro je účinná i proti VOC (těkavým organickým látkám), které jsou hlavní složkou cigaretového kouře.</p>
+          </div>
         </details>
         <details class="faq__item">
-          <summary>Jakou vodu mám používat?</summary>
-          <p>Pouze destilovanou nebo demineralizovanou vodu. Nepoužívejte kohoutkovou vodu — mohlo by dojít k ucpání trysek.</p>
+          <summary>Kolik stojí výměna filtrů u běžné čističky vzduchu?</summary>
+          <div class="faq__answer">
+            <p>Běžné HEPA filtry stojí 500–2 000 Kč za kus a mění se každých 3–6 měsíců. Ročně to vyjde na 2 000–8 000 Kč. CDa Pro žádné filtry nemá — jediný provozní náklad je destilovaná voda.</p>
+          </div>
         </details>
         <details class="faq__item">
-          <summary>Je bezpečná pro děti a domácí zvířata?</summary>
-          <p>Ano. Přístroj nepoužívá žádné chemikálie — pouze čistou vodu. UV modul dezinfikuje vodu v nádrži před rozstřikem.</p>
+          <summary>Nepoškodí nano-mlha elektroniku, papíry nebo nábytek?</summary>
+          <div class="faq__answer">
+            <p>Ne. Kapky jsou tak mikroskopické (5–10 µm), že se odpařují přímo ve vzduchu. Neusazují se na površích, nezvlhčují elektroniku ani dokumenty. To je zásadní rozdíl oproti klasickým zvlhčovačům.</p>
+          </div>
+        </details>
+        <details class="faq__item">
+          <summary>Musím přístroj nechat běžet celý den?</summary>
+          <div class="faq__answer">
+            <p>Vůbec ne. Stačí CDa Pro pustit na 2–5 minut a vzduch je čistý až 6 hodin. Zapněte ji třeba když si odskočíte na záchod nebo na oběd — a vrátíte se do čisté místnosti.</p>
+          </div>
         </details>
         <details class="faq__item">
           <summary>Jak hlučný je přístroj?</summary>
-          <p>Hlučnost je přibližně 75–80 dB, podobně jako vysavač. Doporučujeme použít časovač a nechat přístroj pracovat v zavřené místnosti.</p>
+          <div class="faq__answer">
+            <p>Hlučnost je do 80 dB, podobně jako vysavač. Klíčový rozdíl je v tom, že CDa Pro stačí pustit na 2–5 minut — ne na celý den jako běžnou čističku. Zapněte ji na chvíli, když opouštíte místnost, a vrátíte se do tiché, čisté místnosti.</p>
+          </div>
         </details>
         <details class="faq__item">
-          <summary>Může způsobit vlhkost nebo plísně?</summary>
-          <p>Množství rozstřikované vody je minimální (35 ml/min). V místnostech bez existujících problémů s vlhkostí přístroj plísně nezpůsobuje.</p>
+          <summary>Je CDa Pro ekologická?</summary>
+          <div class="faq__answer">
+            <p>Maximálně. Neprodukuje žádný odpad z filtrů, nepoužívá chemikálie a má přiměřenou spotřebu (850 W). Jediným spotřebním materiálem je destilovaná voda.</p>
+          </div>
         </details>
         <details class="faq__item">
-          <summary>Jak CDa Pro čistí vzduch od virů?</summary>
-          <p>Nano-kapky vody fyzicky obalí virové částice ve vzduchu, ztíží je a způsobí jejich pád. Tento princip byl ověřen nezávislými testy.</p>
+          <summary>Je bezpečná pro děti a domácí zvířata?</summary>
+          <div class="faq__answer">
+            <p>Ano. Přístroj nepoužívá žádné chemikálie — pouze čistou vodu. Chemicky neutrální princip je bezpečný za přítomnosti celé rodiny, na rozdíl od UV dezinfekce nebo chemického mlžení.</p>
+          </div>
         </details>
         <details class="faq__item">
-          <summary>Kolik stojí provoz?</summary>
-          <p>Provozní náklady jsou minimální — potřebujete pouze destilovanou vodu a elektřinu. Žádné filtry, žádné chemikálie.</p>
+          <summary>Jakou vodu mám používat?</summary>
+          <div class="faq__answer">
+            <p>Pouze destilovanou nebo demineralizovanou vodu. Nepoužívejte kohoutkovou vodu — mohlo by dojít k ucpání trysek. Nádrž pojme 1,5 litru.</p>
+          </div>
         </details>
       </div>
     </div>
@@ -452,8 +673,12 @@ const structuredData = {
         <div class="contact__info">
           <span class="section-tag">Kontakt</span>
           <h2 class="section-title" style="color:white;">Zajímá vás AirSancta CDa Pro?</h2>
-          <p style="color:rgba(255,255,255,0.8); font-size:1.1rem; margin-bottom:32px;">
-            Napište nám a rádi vám poskytneme více informací, domluvíme předvedení nebo probereme možnosti pořízení.
+          <p style="color:rgba(255,255,255,0.8); font-size:1.1rem; margin-bottom:16px;">
+            Buďte mezi prvními v ČR, kdo si tuto technologii vyzkouší.
+            Napište nám — rádi vám poskytneme více informací, domluvíme předvedení nebo probereme možnosti pořízení.
+          </p>
+          <p style="color:rgba(255,255,255,0.7); font-size:0.95rem; margin-bottom:32px;">
+            Odpovídáme do 24 hodin v pracovní dny.
           </p>
           <div class="contact__direct">
             <p style="color:rgba(255,255,255,0.7);">Nebo nám napište přímo:</p>
@@ -465,7 +690,7 @@ const structuredData = {
               info@inovaratrade.com
             </a>
           </div>
-          <img src="/images/cda-mini-lifestyle.jpg" alt="AirSancta CDa Pro v moderní kanceláři" width="400" height="280" class="contact__image" />
+          <img src="/images/product-cda-pro.jpg" alt="AirSancta CDa Pro — čistička vzduchu bez filtrů" width="400" height="280" class="contact__image" loading="lazy" />
         </div>
 
         <div class="contact__form-wrap">
@@ -475,6 +700,7 @@ const structuredData = {
             method="POST"
             action="https://api.web3forms.com/submit"
           >
+            <!-- POZOR: Nahraď YOUR_WEB3FORMS_ACCESS_KEY svým klíčem z web3forms.com -->
             <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
             <input type="hidden" name="subject" value="Nová poptávka — AirSancta CDa Pro" />
             <input type="hidden" name="from_name" value="Web innova-nanojet.cz" />
@@ -525,46 +751,44 @@ const structuredData = {
     <div class="container">
       <div class="footer__inner">
         <div class="footer__brand">
-          <img src="/images/airsancta-logo.png" alt="AirSancta logo" width="120" height="36" />
-          <p>AirSancta CDa Pro — Oficiální distribuce pro ČR a SR</p>
-          <p>Distributor: <strong>Inovara Trade</strong></p>
+          <img src="/images/airsancta-logo.png" alt="AirSancta logo" width="120" height="36" loading="lazy" />
+          <p>© 2026 Inovara Group s.r.o. — Oficiální distributor AirSancta pro střední a východní Evropu</p>
+          <a href="https://www.inovaratrade.com" target="_blank" rel="noopener noreferrer" class="footer__email">www.inovaratrade.com</a>
           <a href="mailto:info@inovaratrade.com" class="footer__email">info@inovaratrade.com</a>
+          <p style="margin-top:12px; font-size:0.8rem;">Výrobce: Innova NanoJet Technologies Ltd | <a href="https://www.innova-nanojet.co.uk" target="_blank" rel="noopener noreferrer" style="color:var(--color-blue-light);">www.innova-nanojet.co.uk</a></p>
         </div>
         <div class="footer__links">
           <h4>Navigace</h4>
           <ul>
             <li><a href="#jak-to-funguje">Jak to funguje</a></li>
+            <li><a href="#srovnani">Srovnání</a></li>
             <li><a href="#pro-koho">Pro koho</a></li>
             <li><a href="#vlastnosti">Vlastnosti</a></li>
+            <li><a href="#napsali-o-nas">Napsali o nás</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="/blog/">Blog</a></li>
           </ul>
         </div>
         <div class="footer__links">
-          <h4>Výrobce</h4>
-          <ul>
-            <li><a href="https://www.innova-nanojet.co.uk" target="_blank" rel="noopener noreferrer">innova-nanojet.co.uk</a></li>
-          </ul>
-          <h4 style="margin-top:24px;">Kontakt</h4>
+          <h4>Kontakt</h4>
           <ul>
             <li><a href="mailto:info@inovaratrade.com">info@inovaratrade.com</a></li>
             <li><a href="#kontakt">Kontaktní formulář</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer__bottom">
-        <p>&copy; 2025 Inovara Trade. Všechna práva vyhrazena.</p>
-        <p>AirSancta CDa Pro je produktem <a href="https://www.innova-nanojet.co.uk" target="_blank" rel="noopener noreferrer">innova-nanojet</a>.</p>
-      </div>
     </div>
   </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" aria-label="Zpět nahoru" title="Zpět nahoru">↑</button>
 
   <script>
     // Mobile nav toggle
     const toggle = document.getElementById('navToggle');
-    const nav = document.querySelector('.nav__links');
+    const navLinks = document.querySelector('.nav__links');
     toggle?.addEventListener('click', () => {
-      nav?.classList.toggle('nav__links--open');
+      navLinks?.classList.toggle('nav__links--open');
       toggle.classList.toggle('nav__toggle--open');
     });
 
@@ -576,6 +800,19 @@ const structuredData = {
       } else {
         navbar?.classList.remove('nav--scrolled');
       }
+    });
+
+    // Back to top
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop?.classList.add('back-to-top--visible');
+      } else {
+        backToTop?.classList.remove('back-to-top--visible');
+      }
+    });
+    backToTop?.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
     // Web3Forms submission
@@ -612,7 +849,9 @@ const structuredData = {
       transition: all 0.3s ease;
     }
     .nav--scrolled {
-      background: var(--color-dark);
+      background: rgba(10, 22, 40, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       padding: 12px 0;
       box-shadow: 0 4px 24px rgba(0,0,0,0.2);
     }
@@ -627,12 +866,12 @@ const structuredData = {
     .nav__links {
       display: flex;
       list-style: none;
-      gap: 32px;
+      gap: 24px;
       align-items: center;
     }
     .nav__links a {
       color: white;
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       font-weight: 500;
       transition: color 0.2s;
     }
@@ -706,17 +945,18 @@ const structuredData = {
       font-weight: 500;
     }
     .hero__title {
-      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
       color: white;
       margin-bottom: 24px;
       font-weight: 800;
       line-height: 1.1;
     }
     .hero__subtitle {
-      font-size: clamp(1rem, 1.8vw, 1.25rem);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
       color: rgba(255,255,255,0.85);
       margin-bottom: 40px;
-      max-width: 560px;
+      max-width: 600px;
+      line-height: 1.7;
     }
     .hero__actions {
       display: flex;
@@ -768,7 +1008,7 @@ const structuredData = {
     }
     .how-it-works__steps {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
       gap: 0;
       margin-bottom: 80px;
@@ -812,12 +1052,14 @@ const structuredData = {
     .step p {
       font-size: 0.9rem;
       color: var(--color-gray);
+      line-height: 1.6;
     }
     .step__arrow {
       font-size: 2rem;
       color: var(--color-blue);
-      margin: 0 16px;
+      margin: 60px 16px 0;
       font-weight: 300;
+      align-self: flex-start;
     }
     .how-it-works__visual {
       display: grid;
@@ -829,6 +1071,13 @@ const structuredData = {
       border-radius: var(--radius);
       width: 100%;
     }
+    .diagram-caption {
+      margin-top: 12px;
+      font-size: 0.82rem;
+      color: var(--color-gray);
+      font-style: italic;
+      line-height: 1.5;
+    }
     .how-it-works__text h3 {
       font-size: 1.5rem;
       color: var(--color-dark);
@@ -837,6 +1086,7 @@ const structuredData = {
     .how-it-works__text p {
       color: var(--color-gray-dark);
       margin-bottom: 16px;
+      line-height: 1.7;
     }
     .check-list {
       list-style: none;
@@ -848,6 +1098,7 @@ const structuredData = {
       position: relative;
       color: var(--color-gray-dark);
       font-weight: 500;
+      font-size: 0.95rem;
     }
     .check-list li::before {
       content: '✓';
@@ -857,9 +1108,72 @@ const structuredData = {
       font-weight: 700;
     }
 
+    /* COMPARISON */
+    .comparison {
+      padding: var(--section-pad);
+      background: white;
+    }
+    .comparison-table-wrap {
+      overflow-x: auto;
+      margin-bottom: 32px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .comparison-table th,
+    .comparison-table td {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .comparison-table thead th {
+      background: var(--color-dark);
+      color: white;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .comparison-table thead th:first-child {
+      border-radius: var(--radius) 0 0 0;
+    }
+    .comparison-table thead th:last-child {
+      border-radius: 0 var(--radius) 0 0;
+    }
+    .comparison-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .comparison-table tbody tr:hover {
+      background: #f9fafb;
+    }
+    .highlight-col {
+      background: rgba(33, 150, 243, 0.06);
+    }
+    .highlight-col strong {
+      color: var(--color-blue-dark);
+    }
+    .comparison-table th.highlight-col {
+      background: var(--color-blue);
+    }
+    .comparison-note {
+      background: #f0f9ff;
+      border-left: 4px solid var(--color-blue);
+      padding: 20px 24px;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      color: var(--color-gray-dark);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .comparison-note strong {
+      color: var(--color-dark);
+    }
+
     /* FOR WHOM */
     .for-whom {
       padding: var(--section-pad);
+      background: var(--color-gray-light);
     }
     .cards-grid {
       display: grid;
@@ -867,11 +1181,14 @@ const structuredData = {
       gap: 24px;
       margin-bottom: 80px;
     }
+    .cards-grid--5 {
+      grid-template-columns: repeat(5, 1fr);
+    }
     .card {
       background: white;
       border: 1px solid #e5e7eb;
       border-radius: var(--radius);
-      padding: 32px 24px;
+      padding: 32px 20px;
       transition: all 0.3s ease;
     }
     .card:hover {
@@ -884,22 +1201,24 @@ const structuredData = {
       margin-bottom: 16px;
     }
     .card h3 {
-      font-size: 1.1rem;
+      font-size: 1rem;
       margin-bottom: 10px;
       color: var(--color-dark);
     }
     .card p {
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       color: var(--color-gray);
+      line-height: 1.6;
     }
     .product-showcase {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 60px;
       align-items: center;
-      background: var(--color-gray-light);
+      background: white;
       border-radius: 24px;
       overflow: hidden;
+      box-shadow: var(--shadow);
     }
     .product-showcase__image img {
       width: 100%;
@@ -917,6 +1236,7 @@ const structuredData = {
     .product-showcase__content p {
       color: var(--color-gray-dark);
       margin-bottom: 16px;
+      line-height: 1.7;
     }
 
     /* FEATURES */
@@ -969,17 +1289,139 @@ const structuredData = {
       color: rgba(255,255,255,0.5);
     }
 
+    /* PRICE */
+    .price-section {
+      padding: 48px 24px;
+      background: var(--color-dark-mid);
+    }
+    .price-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+      background: rgba(33,150,243,0.1);
+      border: 1px solid rgba(33,150,243,0.3);
+      border-radius: var(--radius);
+      padding: 32px 40px;
+    }
+    .price-box__content h3 {
+      font-size: 1.4rem;
+      color: white;
+      margin-bottom: 8px;
+    }
+    .price-box__content h3 strong {
+      color: var(--color-blue-light);
+      font-size: 1.6rem;
+    }
+    .price-box__content h3 span {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.6);
+      font-weight: 400;
+    }
+    .price-box__content p {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.95rem;
+    }
+
+    /* PRESS */
+    .press {
+      padding: var(--section-pad);
+      background: var(--color-gray-light);
+    }
+    .press__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .press__card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: var(--radius);
+      padding: 28px;
+      display: block;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+    .press__card:hover {
+      border-color: var(--color-blue);
+      box-shadow: var(--shadow);
+      transform: translateY(-3px);
+    }
+    .press__media {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-blue);
+      background: rgba(33,150,243,0.1);
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+    }
+    .press__card h3 {
+      font-size: 1rem;
+      color: var(--color-dark);
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    .press__card p {
+      font-size: 0.875rem;
+      color: var(--color-gray);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .press__link {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-blue);
+    }
+
+    /* FIRST CTA */
+    .first-cta {
+      padding: 60px 24px;
+      background: var(--color-blue);
+    }
+    .first-cta__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .first-cta__inner h2 {
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      color: white;
+      margin-bottom: 8px;
+    }
+    .first-cta__inner p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1rem;
+    }
+    .first-cta .btn-primary {
+      background: white;
+      color: var(--color-blue);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .first-cta .btn-primary:hover {
+      background: rgba(255,255,255,0.9);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+
     /* FAQ */
     .faq {
       padding: var(--section-pad);
-      background: var(--color-gray-light);
+      background: white;
     }
     .faq__list {
       max-width: 800px;
       margin: 0 auto;
     }
     .faq__item {
-      background: white;
+      background: var(--color-gray-light);
       border-radius: var(--radius);
       margin-bottom: 12px;
       border: 1px solid #e5e7eb;
@@ -995,6 +1437,7 @@ const structuredData = {
       color: var(--color-dark);
       list-style: none;
       transition: background 0.2s;
+      font-size: 1rem;
     }
     .faq__item summary::-webkit-details-marker { display: none; }
     .faq__item summary::after {
@@ -1004,18 +1447,23 @@ const structuredData = {
       color: var(--color-blue);
       transition: transform 0.3s;
       flex-shrink: 0;
+      margin-left: 16px;
     }
     .faq__item[open] summary::after {
       transform: rotate(45deg);
     }
     .faq__item[open] summary {
-      background: rgba(33,150,243,0.04);
+      background: rgba(33,150,243,0.06);
     }
-    .faq__item p {
-      padding: 0 24px 20px;
+    .faq__answer {
+      border-top: 1px solid #e5e7eb;
+      padding: 20px 24px 24px;
+    }
+    .faq__answer p {
       color: var(--color-gray-dark);
       font-size: 0.95rem;
-      line-height: 1.7;
+      line-height: 1.75;
+      margin: 0;
     }
 
     /* CONTACT */
@@ -1116,26 +1564,26 @@ const structuredData = {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr;
       gap: 40px;
-      margin-bottom: 48px;
+      margin-bottom: 32px;
     }
     .footer__brand img {
       filter: brightness(0) invert(1);
       margin-bottom: 16px;
     }
     .footer__brand p {
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       margin-bottom: 6px;
-    }
-    .footer__brand strong {
-      color: white;
+      line-height: 1.6;
     }
     .footer__email {
+      display: block;
       color: var(--color-blue-light);
-      font-size: 0.9rem;
+      font-size: 0.875rem;
+      margin-bottom: 4px;
     }
     .footer__links h4 {
       color: white;
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       margin-bottom: 14px;
       text-transform: uppercase;
       letter-spacing: 0.08em;
@@ -1147,33 +1595,55 @@ const structuredData = {
       margin-bottom: 8px;
     }
     .footer__links a {
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       color: rgba(255,255,255,0.55);
       transition: color 0.2s;
     }
     .footer__links a:hover {
       color: white;
     }
-    .footer__bottom {
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding-top: 24px;
+
+    /* BACK TO TOP */
+    .back-to-top {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      width: 48px;
+      height: 48px;
+      background: var(--color-blue);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 8px;
-      font-size: 0.85rem;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(33,150,243,0.4);
+      opacity: 0;
+      transform: translateY(16px);
+      transition: all 0.3s ease;
+      z-index: 999;
     }
-    .footer__bottom a {
-      color: var(--color-blue-light);
+    .back-to-top--visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .back-to-top:hover {
+      background: var(--color-blue-dark);
+      transform: translateY(-2px);
     }
 
     /* RESPONSIVE */
+    @media (max-width: 1200px) {
+      .cards-grid--5 { grid-template-columns: repeat(3, 1fr); }
+    }
     @media (max-width: 1024px) {
       .cards-grid { grid-template-columns: repeat(2, 1fr); }
       .how-it-works__visual { grid-template-columns: 1fr; }
       .features__inner { grid-template-columns: 1fr; }
       .features__image { display: none; }
+      .press__grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 768px) {
@@ -1190,20 +1660,24 @@ const structuredData = {
       }
       .nav__links--open { display: flex; }
       .nav__toggle { display: flex; }
-      .how-it-works__steps { flex-direction: column; }
-      .step__arrow { transform: rotate(90deg); }
+      .how-it-works__steps { flex-direction: column; align-items: center; }
+      .step__arrow { transform: rotate(90deg); margin: 0 0 0 0; }
       .cards-grid { grid-template-columns: 1fr; }
+      .cards-grid--5 { grid-template-columns: 1fr; }
       .product-showcase { grid-template-columns: 1fr; }
       .product-showcase__content { padding: 32px 24px; }
       .contact__inner { grid-template-columns: 1fr; }
       .footer__inner { grid-template-columns: 1fr; }
-      .footer__bottom { flex-direction: column; text-align: center; }
+      .press__grid { grid-template-columns: 1fr; }
+      .first-cta__inner { flex-direction: column; }
+      .price-box { flex-direction: column; }
     }
 
     @media (max-width: 480px) {
       .hero__stats { gap: 24px; }
       .hero__actions { flex-direction: column; }
       .contact__form-wrap { padding: 24px; }
+      .back-to-top { bottom: 20px; right: 20px; }
     }
   </style>
 </BaseLayout>

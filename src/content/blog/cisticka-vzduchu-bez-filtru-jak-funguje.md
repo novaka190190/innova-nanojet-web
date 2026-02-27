@@ -95,3 +95,9 @@ Buďme féroví: NanoJet technologie má i svá specifika, která je třeba zná
 - **Hotely a restaurace**: Eliminace pachů je rychlá a efektivní
 
 Technologie bez filtrů není budoucností — je přítomností. A pro správné aplikace nabízí přesvědčivé výhody oproti klasickým HEPA přístrojům.
+
+## Související články
+
+- [Čištění vzduchu pouze vodou: Jak to funguje?](/blog/cisteni-vzduchu-vodou/)
+- [Kolik HEPA filtrů vyhodíte za rok? Skrytá ekologická stopa čističek vzduchu](/blog/hepa-filtr-odpad-ekologie/)
+- [Máte čističku vzduchu a alergie nepomáhá?](/blog/cisticka-vzduchu-alergie-nepomaha/)

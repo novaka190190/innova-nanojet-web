@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Stránka nenalezena (404) | innova-nanojet.cz"
+  description="Hledaná stránka neexistuje. Přejděte na úvodní stránku nebo do blogu."
+>
+  <style>
+    .not-found {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-dark);
+      padding: 40px 24px;
+    }
+    .not-found__inner {
+      text-align: center;
+      max-width: 560px;
+    }
+    .not-found__code {
+      font-size: clamp(6rem, 20vw, 10rem);
+      font-weight: 800;
+      color: var(--color-blue);
+      line-height: 1;
+      margin-bottom: 24px;
+      opacity: 0.9;
+    }
+    .not-found__title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: white;
+      margin-bottom: 16px;
+    }
+    .not-found__text {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+    .not-found__actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-outline-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 50px;
+      border: 2px solid rgba(255,255,255,0.4);
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+    .btn-outline-white:hover {
+      border-color: white;
+      background: rgba(255,255,255,0.1);
+    }
+  </style>
+
+  <div class="not-found">
+    <div class="not-found__inner">
+      <div class="not-found__code">404</div>
+      <h1 class="not-found__title">Stránka nenalezena</h1>
+      <p class="not-found__text">
+        Hledaná stránka neexistuje nebo byla přesunuta.
+        Zkuste se vrátit na úvodní stránku nebo si přečtěte náš blog o kvalitě vzduchu.
+      </p>
+      <div class="not-found__actions">
+        <a href="/" class="btn btn-primary">← Úvodní stránka</a>
+        <a href="/blog/" class="btn-outline-white">Blog</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

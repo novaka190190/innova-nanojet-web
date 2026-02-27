@@ -105,3 +105,9 @@ Výhoda oproti ozonu: **není třeba opustit místnost**, žádné chemikálie, 
 - **Myslete na skryté zdroje** — plíseň v koupelně, plesnivý syr v lednici, mokrý koberec pod umyvadlem
 
 Čistý vzduch a příjemný pach interiéru není jen otázkou estetiky. Je to signál skutečně zdravého domácího prostředí — bez skrytých zdrojů znečištění, plísní nebo chemikálií.
+
+## Související články
+
+- [Cigaretový kouř od sousedů: Jak se bránit, když právník nestačí](/blog/cigaretovy-kour-od-sousedu/)
+- [Jak zlepšit kvalitu vzduchu doma](/blog/jak-zlepsit-kvalitu-vzduchu-doma/)
+- [Čištění vzduchu pouze vodou: Jak to funguje?](/blog/cisteni-vzduchu-vodou/)

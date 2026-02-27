@@ -81,3 +81,9 @@ Existují levné CO₂ senzory a senzory PM2.5 (jemné prachové částice), kte
 5. **Pořiďte čističku vzduchu** — pokud trpíte alergiemi nebo máte děti
 
 Čistý vzduch v domácnosti není luxus — je to základ zdravého bydlení. Dobrou zprávou je, že řada opatření nic nestojí a stačí jen trochu změnit návyky.
+
+## Související články
+
+- [Čistička vzduchu bez filtrů: Jak funguje?](/blog/cisticka-vzduchu-bez-filtru-jak-funguje/)
+- [Suchý vzduch v zimě: Proč škodí a jak ho řešit?](/blog/suchy-vzduch-v-zime-reseni/)
+- [Alergie a kvalita vzduchu v bytě: Co opravdu pomáhá?](/blog/alergie-a-kvalita-vzduchu-v-byte/)

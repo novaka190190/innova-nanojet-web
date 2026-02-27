@@ -44,7 +44,7 @@ const categoryLabels: Record<string, string> = {
             <a href={`/blog/${post.slug}/`} class={`post-card ${index === 0 ? 'post-card--featured' : ''}`}>
               {post.data.image && (
                 <div class="post-card__image">
-                  <img src={post.data.image} alt={post.data.imageAlt ?? post.data.title} width="600" height="340" />
+                  <img src={post.data.image} alt={post.data.imageAlt ?? post.data.title} width="600" height="340" loading="lazy" />
                 </div>
               )}
               <div class="post-card__content">
@@ -65,8 +65,8 @@ const categoryLabels: Record<string, string> = {
 
       <!-- CTA -->
       <div class="blog-bottom-cta">
-        <h2>Chcete vědět více o AirSancta CDa Pro?</h2>
-        <p>Kontaktujte nás — rádi odpovíme na vaše otázky a domluvíme předvedení přístroje.</p>
+        <h2>Buďte mezi prvními v ČR, kdo si tuto technologii vyzkouší</h2>
+        <p>Inovativní produkt dostupný v ČR od roku 2025. Chcete být u toho? Napište nám — rádi odpovíme na vaše otázky a domluvíme předvedení přístroje.</p>
         <a href="/#kontakt" class="btn btn-primary">Kontaktujte nás</a>
       </div>
     </div>

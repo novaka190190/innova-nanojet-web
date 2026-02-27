@@ -1,0 +1,1209 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://innova-nanojet.cz/#organization",
+      "name": "Inovara Trade",
+      "url": "https://innova-nanojet.cz",
+      "email": "info@inovaratrade.com",
+      "description": "Oficiální distributor AirSancta CDa Pro pro ČR a SR"
+    },
+    {
+      "@type": "Product",
+      "@id": "https://innova-nanojet.cz/#product",
+      "name": "AirSancta CDa Pro",
+      "description": "Revoluční čistička vzduchu bez filtrů s patentovanou NanoJet technologií. Používá pouze vodu k zachycení virů, bakterií, alergenů a prachu.",
+      "brand": {
+        "@type": "Brand",
+        "name": "AirSancta"
+      },
+      "image": "https://innova-nanojet.cz/images/product-cda-pro.jpg",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "CZK",
+        "seller": {
+          "@type": "Organization",
+          "name": "Inovara Trade"
+        }
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://innova-nanojet.cz/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Je CDa Pro čistička nebo zvlhčovač?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CDa Pro je primárně čistička vzduchu. Díky principu vodní mlhy ale přirozeně zvlhčuje vzduch, což je bonus zejména v zimě při vytápění."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Musím kupovat náhradní filtry?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ne. CDa Pro je kompletně bez filtrů. Používá pouze destilovanou vodu, což výrazně snižuje provozní náklady."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jakou vodu mám používat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pouze destilovanou nebo demineralizovanou vodu. Nepoužívejte kohoutkovou vodu — mohlo by dojít k ucpání trysek."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Je bezpečná pro děti a domácí zvířata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ano. Přístroj nepoužívá žádné chemikálie — pouze čistou vodu. UV modul dezinfikuje vodu v nádrži před rozstřikem."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jak hlučný je přístroj?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hlučnost je přibližně 75–80 dB, podobně jako vysavač. Doporučujeme použít časovač a nechat přístroj pracovat v zavřené místnosti."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Může způsobit vlhkost nebo plísně?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Množství rozstřikované vody je minimální (35 ml/min). V místnostech bez existujících problémů s vlhkostí přístroj plísně nezpůsobuje."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jak CDa Pro čistí vzduch od virů?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nano-kapky vody fyzicky obalí virové částice ve vzduchu, ztíží je a způsobí jejich pád. Tento princip byl ověřen nezávislými testy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kolik stojí provoz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Provozní náklady jsou minimální — potřebujete pouze destilovanou vodu a elektřinu. Žádné filtry, žádné chemikálie."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="AirSancta CDa Pro — Čistička vzduchu bez filtrů | innova-nanojet.cz"
+  description="Čistý vzduch pro váš domov i kancelář. AirSancta CDa Pro — revoluční čistička vzduchu bez filtrů s NanoJet technologií. Odstraňuje 99 % virů, bakterií a alergenů. Distributor pro ČR a SR."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <!-- NAVIGACE -->
+  <nav class="nav">
+    <div class="nav__inner container">
+      <a href="/" class="nav__logo">
+        <img src="/images/airsancta-logo.png" alt="AirSancta logo" width="140" height="40" />
+      </a>
+      <ul class="nav__links">
+        <li><a href="#jak-to-funguje">Technologie</a></li>
+        <li><a href="#pro-koho">Pro koho</a></li>
+        <li><a href="#vlastnosti">Vlastnosti</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="#kontakt" class="btn btn-primary">Kontakt</a></li>
+      </ul>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <img src="/images/hero.jpg" alt="AirSancta CDa Pro čistička vzduchu v moderním interiéru" width="1920" height="1080" />
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content container">
+      <div class="hero__badge">
+        <img src="/images/ces-award.png" alt="CES Innovation Award" width="80" height="80" />
+        <span>Ocenění CES Innovation</span>
+      </div>
+      <h1 class="hero__title">Čistý vzduch pro váš<br />domov i kancelář</h1>
+      <p class="hero__subtitle">
+        AirSancta CDa Pro — revoluční čistička vzduchu bez filtrů.<br />
+        Používá pouze vodu. Žádná chemie. Žádné filtry.
+      </p>
+      <div class="hero__actions">
+        <a href="#kontakt" class="btn btn-primary">Chci více informací</a>
+        <a href="#jak-to-funguje" class="btn btn-outline">Jak to funguje?</a>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <strong>99 %</strong>
+          <span>odstranění znečišťujících látek</span>
+        </div>
+        <div class="hero__stat">
+          <strong>120 m²</strong>
+          <span>pokrytá plocha</span>
+        </div>
+        <div class="hero__stat">
+          <strong>0 ks</strong>
+          <span>náhradních filtrů</span>
+        </div>
+      </div>
+    </div>
+    <a href="#jak-to-funguje" class="hero__scroll" aria-label="Scrollovat dolů">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </a>
+  </section>
+
+  <!-- JAK TO FUNGUJE -->
+  <section class="how-it-works" id="jak-to-funguje">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Technologie</span>
+        <h2 class="section-title">Jak funguje technologie NanoJet?</h2>
+        <p class="section-subtitle">
+          Na rozdíl od klasických čističek s HEPA filtry používá CDa Pro pouze vodu.
+          Žádné drahé výměny filtrů, žádné chemikálie.
+        </p>
+      </div>
+
+      <div class="how-it-works__steps">
+        <div class="step">
+          <div class="step__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="28" fill="rgba(33,150,243,0.12)"/>
+              <path d="M32 20c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 4a8 8 0 110 16 8 8 0 010-16z" fill="#2196F3"/>
+              <circle cx="20" cy="22" r="3" fill="#2196F3" opacity="0.6"/>
+              <circle cx="44" cy="22" r="2" fill="#2196F3" opacity="0.4"/>
+              <circle cx="44" cy="42" r="3" fill="#2196F3" opacity="0.6"/>
+              <circle cx="20" cy="42" r="2" fill="#2196F3" opacity="0.4"/>
+            </svg>
+          </div>
+          <div class="step__num">1</div>
+          <h3>Biliony nano-kapek</h3>
+          <p>Přístroj generuje biliony ultrarychlých nano-vodních kapek, které zaplní celou místnost.</p>
+        </div>
+        <div class="step__arrow">→</div>
+        <div class="step">
+          <div class="step__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="28" fill="rgba(33,150,243,0.12)"/>
+              <path d="M24 28l8 8 8-8" stroke="#2196F3" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M20 36s4-8 12-8 12 8 12 8" stroke="#2196F3" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="32" cy="20" r="4" fill="#2196F3"/>
+            </svg>
+          </div>
+          <div class="step__num">2</div>
+          <h3>Zachycení a eliminace</h3>
+          <p>Kapky zachytí viry, bakterie, alergeny a prach ve vzduchu a obalí je ve vodě.</p>
+        </div>
+        <div class="step__arrow">→</div>
+        <div class="step">
+          <div class="step__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="28" fill="rgba(33,150,243,0.12)"/>
+              <path d="M32 18v28M22 36l10 10 10-10" stroke="#2196F3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20 22h24" stroke="#2196F3" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+            </svg>
+          </div>
+          <div class="step__num">3</div>
+          <h3>Čistý vzduch za minuty</h3>
+          <p>Kontaminanty ztěžknou a klesnou — vzduch je čistý během minut. Přirozeně, bez chemie.</p>
+        </div>
+      </div>
+
+      <div class="how-it-works__visual">
+        <div class="how-it-works__image">
+          <img src="/images/nanojet-diagram.png" alt="Diagram technologie NanoJet — jak nano-kapky čistí vzduch" width="600" height="400" />
+        </div>
+        <div class="how-it-works__text">
+          <h3>Patentovaná fyzikální metoda</h3>
+          <p>
+            NanoJet technologie využívá čistě fyzikální princip bez jakýchkoli chemických přísad.
+            Průmyslová tryska rozprašuje vodu na ultra-miniaturní kapky o velikosti 5–10 mikronů,
+            které jsou 1000× menší než kapky z klasického zvlhčovače.
+          </p>
+          <p>
+            Tyto kapky mají obrovský celkový povrch, díky čemuž jsou extrémně efektivní
+            při zachycování aerosolových částic, virů a bakterií z okolního vzduchu.
+          </p>
+          <ul class="check-list">
+            <li>Ověřeno nezávislými laboratořemi</li>
+            <li>Ocenění CES Innovation Award</li>
+            <li>Patentovaná technologie innova-nanojet</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRO KOHO -->
+  <section class="for-whom" id="pro-koho">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Využití</span>
+        <h2 class="section-title">Pro koho je AirSancta CDa Pro</h2>
+        <p class="section-subtitle">Přístroj je vhodný všude tam, kde záleží na kvalitě vzduchu a zdraví lidí.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card__icon">🏠</div>
+          <h3>Domácnosti</h3>
+          <p>Zlepšete kvalitu vzduchu v obýváku, ložnici nebo dětském pokoji. Ideální pro rodiny s malými dětmi.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🏢</div>
+          <h3>Kanceláře</h3>
+          <p>Snižte šíření virů a zvyšte produktivitu zaměstnanců. Čistší vzduch = méně nemocných dní.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🌿</div>
+          <h3>Alergici</h3>
+          <p>Rychle odstraňte pyly, roztoče a další alergeny. Uleva od sezónních i celoročních alergií.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🏨</div>
+          <h3>Hotely & restaurace</h3>
+          <p>Profesionální čištění vzduchu pro vaše hosty. Eliminace pachů z kuchyně a cigaretového kouře.</p>
+        </div>
+      </div>
+
+      <div class="product-showcase">
+        <div class="product-showcase__image">
+          <img src="/images/lifestyle-dog.jpg" alt="AirSancta CDa Pro v domácnosti se psem — bezpečná pro domácí zvířata" width="600" height="500" />
+        </div>
+        <div class="product-showcase__content">
+          <h3>Bezpečná pro celou rodinu</h3>
+          <p>CDa Pro nepoužívá žádné chemikálie — pouze čistou destilovanou vodu. Je proto naprosto bezpečná pro děti, seniory i domácí zvířata.</p>
+          <p>UV modul navíc dezinfikuje vodu v nádrži ještě před rozstřikem, takže do vzduchu se dostává skutečně čistá voda.</p>
+          <a href="#kontakt" class="btn btn-primary">Zjistit více</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VLASTNOSTI -->
+  <section class="features" id="vlastnosti">
+    <div class="container">
+      <div class="features__inner">
+        <div class="features__image">
+          <img src="/images/product-cda-pro.jpg" alt="AirSancta CDa Pro — detail produktu" width="500" height="600" />
+        </div>
+        <div class="features__content">
+          <span class="section-tag">Specifikace</span>
+          <h2 class="section-title">Co dělá CDa Pro výjimečnou</h2>
+          <ul class="features__list">
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" fill="#2196F3"/>
+                <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <strong>Patentovaná NanoJet technologie</strong>
+                <span>Jedinečný fyzikální princip čištění vzduchu</span>
+              </div>
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" fill="#2196F3"/>
+                <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <strong>Bez filtrů — používá pouze vodu</strong>
+                <span>Žádné drahé výměny filtrů každé 3 měsíce</span>
+              </div>
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" fill="#2196F3"/>
+                <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <strong>Odstranění 99 % znečišťujících látek</strong>
+                <span>Viry, bakterie, plísně, alergeny, prach, VOC</span>
+              </div>
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" fill="#2196F3"/>
+                <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <strong>Bez chemikálií — čistě fyzikální princip</strong>
+                <span>Bezpečné pro děti, seniory i domácí zvířata</span>
+              </div>
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" fill="#2196F3"/>
+                <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <strong>Nízká spotřeba energie</strong>
+                <span>Efektivní provoz s minimálními náklady</span>
+              </div>
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" fill="#2196F3"/>
+                <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <strong>UV dezinfekce vody v nádrži</strong>
+                <span>Voda je dezinfikována UV světlem před každým rozstřikem</span>
+              </div>
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" fill="#2196F3"/>
+                <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <strong>Vhodná pro prostory do 120 m²</strong>
+                <span>Pokryje obývací pokoj, kancelář i větší místnosti</span>
+              </div>
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" fill="#2196F3"/>
+                <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <strong>Provoz cca 45 minut na jednu nádrž (1,8 l)</strong>
+                <span>Dostatečně dlouhé cykly pro efektivní čištění</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Otázky a odpovědi</span>
+        <h2 class="section-title">Často kladené otázky</h2>
+        <p class="section-subtitle">Máte otázku, kterou tu nenajdete? Neváhejte nás kontaktovat.</p>
+      </div>
+
+      <div class="faq__list">
+        <details class="faq__item">
+          <summary>Je CDa Pro čistička nebo zvlhčovač?</summary>
+          <p>CDa Pro je primárně čistička vzduchu. Díky principu vodní mlhy ale přirozeně zvlhčuje vzduch, což je bonus zejména v zimě při vytápění.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Musím kupovat náhradní filtry?</summary>
+          <p>Ne. CDa Pro je kompletně bez filtrů. Používá pouze destilovanou vodu, což výrazně snižuje provozní náklady.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Jakou vodu mám používat?</summary>
+          <p>Pouze destilovanou nebo demineralizovanou vodu. Nepoužívejte kohoutkovou vodu — mohlo by dojít k ucpání trysek.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Je bezpečná pro děti a domácí zvířata?</summary>
+          <p>Ano. Přístroj nepoužívá žádné chemikálie — pouze čistou vodu. UV modul dezinfikuje vodu v nádrži před rozstřikem.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Jak hlučný je přístroj?</summary>
+          <p>Hlučnost je přibližně 75–80 dB, podobně jako vysavač. Doporučujeme použít časovač a nechat přístroj pracovat v zavřené místnosti.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Může způsobit vlhkost nebo plísně?</summary>
+          <p>Množství rozstřikované vody je minimální (35 ml/min). V místnostech bez existujících problémů s vlhkostí přístroj plísně nezpůsobuje.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Jak CDa Pro čistí vzduch od virů?</summary>
+          <p>Nano-kapky vody fyzicky obalí virové částice ve vzduchu, ztíží je a způsobí jejich pád. Tento princip byl ověřen nezávislými testy.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Kolik stojí provoz?</summary>
+          <p>Provozní náklady jsou minimální — potřebujete pouze destilovanou vodu a elektřinu. Žádné filtry, žádné chemikálie.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section class="contact" id="kontakt">
+    <div class="container">
+      <div class="contact__inner">
+        <div class="contact__info">
+          <span class="section-tag">Kontakt</span>
+          <h2 class="section-title" style="color:white;">Zajímá vás AirSancta CDa Pro?</h2>
+          <p style="color:rgba(255,255,255,0.8); font-size:1.1rem; margin-bottom:32px;">
+            Napište nám a rádi vám poskytneme více informací, domluvíme předvedení nebo probereme možnosti pořízení.
+          </p>
+          <div class="contact__direct">
+            <p style="color:rgba(255,255,255,0.7);">Nebo nám napište přímo:</p>
+            <a href="mailto:info@inovaratrade.com?subject=Zájem%20o%20AirSancta%20CDa%20Pro" class="contact__email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              info@inovaratrade.com
+            </a>
+          </div>
+          <img src="/images/cda-mini-lifestyle.jpg" alt="AirSancta CDa Pro v moderní kanceláři" width="400" height="280" class="contact__image" />
+        </div>
+
+        <div class="contact__form-wrap">
+          <form
+            class="contact__form"
+            id="contactForm"
+            method="POST"
+            action="https://api.web3forms.com/submit"
+          >
+            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+            <input type="hidden" name="subject" value="Nová poptávka — AirSancta CDa Pro" />
+            <input type="hidden" name="from_name" value="Web innova-nanojet.cz" />
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none;" />
+
+            <div class="form-group">
+              <label for="name">Jméno a příjmení *</label>
+              <input type="text" id="name" name="name" required placeholder="Jan Novák" />
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail *</label>
+              <input type="email" id="email" name="email" required placeholder="jan@example.cz" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Telefon (nepovinné)</label>
+              <input type="tel" id="phone" name="phone" placeholder="+420 123 456 789" />
+            </div>
+            <div class="form-group">
+              <label for="message">Zpráva *</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Zajímá mě AirSancta CDa Pro — rád bych se dozvěděl více informací..."></textarea>
+            </div>
+
+            <div class="form-success" id="formSuccess" style="display:none;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" fill="#22c55e"/>
+                <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              Děkujeme! Vaše zpráva byla odeslána. Ozveme se vám co nejdříve.
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+              Odeslat zprávu
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+            </button>
+
+            <p class="form-note">Odpovídáme zpravidla do 24 hodin v pracovní dny.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="/images/airsancta-logo.png" alt="AirSancta logo" width="120" height="36" />
+          <p>AirSancta CDa Pro — Oficiální distribuce pro ČR a SR</p>
+          <p>Distributor: <strong>Inovara Trade</strong></p>
+          <a href="mailto:info@inovaratrade.com" class="footer__email">info@inovaratrade.com</a>
+        </div>
+        <div class="footer__links">
+          <h4>Navigace</h4>
+          <ul>
+            <li><a href="#jak-to-funguje">Jak to funguje</a></li>
+            <li><a href="#pro-koho">Pro koho</a></li>
+            <li><a href="#vlastnosti">Vlastnosti</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="/blog/">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Výrobce</h4>
+          <ul>
+            <li><a href="https://www.innova-nanojet.co.uk" target="_blank" rel="noopener noreferrer">innova-nanojet.co.uk</a></li>
+          </ul>
+          <h4 style="margin-top:24px;">Kontakt</h4>
+          <ul>
+            <li><a href="mailto:info@inovaratrade.com">info@inovaratrade.com</a></li>
+            <li><a href="#kontakt">Kontaktní formulář</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Inovara Trade. Všechna práva vyhrazena.</p>
+        <p>AirSancta CDa Pro je produktem <a href="https://www.innova-nanojet.co.uk" target="_blank" rel="noopener noreferrer">innova-nanojet</a>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const toggle = document.getElementById('navToggle');
+    const nav = document.querySelector('.nav__links');
+    toggle?.addEventListener('click', () => {
+      nav?.classList.toggle('nav__links--open');
+      toggle.classList.toggle('nav__toggle--open');
+    });
+
+    // Sticky nav
+    const navbar = document.querySelector('.nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar?.classList.add('nav--scrolled');
+      } else {
+        navbar?.classList.remove('nav--scrolled');
+      }
+    });
+
+    // Web3Forms submission
+    const form = document.getElementById('contactForm') as HTMLFormElement;
+    const successMsg = document.getElementById('formSuccess');
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: data,
+        });
+        const json = await res.json();
+        if (json.success) {
+          form.reset();
+          if (successMsg) successMsg.style.display = 'flex';
+        }
+      } catch {
+        window.location.href = `mailto:info@inovaratrade.com?subject=${encodeURIComponent('Zájem o AirSancta CDa Pro')}`;
+      }
+    });
+  </script>
+
+  <style>
+    /* NAV */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 20px 0;
+      transition: all 0.3s ease;
+    }
+    .nav--scrolled {
+      background: var(--color-dark);
+      padding: 12px 0;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+    }
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav__logo img {
+      filter: brightness(0) invert(1);
+    }
+    .nav__links {
+      display: flex;
+      list-style: none;
+      gap: 32px;
+      align-items: center;
+    }
+    .nav__links a {
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav__links a:not(.btn):hover {
+      color: var(--color-blue-light);
+    }
+    .nav__toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav__toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: white;
+      transition: all 0.3s;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+    }
+    .hero__bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10,22,40,0.88) 0%, rgba(10,22,40,0.5) 100%);
+    }
+    .hero__content {
+      position: relative;
+      z-index: 1;
+      padding: 120px 24px 80px;
+    }
+    .hero__badge {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(8px);
+      padding: 10px 20px;
+      border-radius: 50px;
+      width: fit-content;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .hero__badge img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+    .hero__badge span {
+      color: white;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .hero__title {
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      color: white;
+      margin-bottom: 24px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+    .hero__subtitle {
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 40px;
+      max-width: 560px;
+    }
+    .hero__actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+    .hero__stats {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .hero__stat strong {
+      display: block;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--color-blue-light);
+    }
+    .hero__stat span {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.65);
+    }
+    .hero__scroll {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      opacity: 0.6;
+      animation: bounce 2s infinite;
+      z-index: 1;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* HOW IT WORKS */
+    .how-it-works {
+      padding: var(--section-pad);
+      background: var(--color-gray-light);
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .section-header .section-subtitle {
+      margin: 0 auto;
+    }
+    .how-it-works__steps {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 80px;
+      flex-wrap: wrap;
+    }
+    .step {
+      background: white;
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      text-align: center;
+      max-width: 280px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    .step__icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+    }
+    .step__num {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 28px;
+      height: 28px;
+      background: var(--color-blue);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+    .step h3 {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      color: var(--color-dark);
+    }
+    .step p {
+      font-size: 0.9rem;
+      color: var(--color-gray);
+    }
+    .step__arrow {
+      font-size: 2rem;
+      color: var(--color-blue);
+      margin: 0 16px;
+      font-weight: 300;
+    }
+    .how-it-works__visual {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .how-it-works__image img {
+      border-radius: var(--radius);
+      width: 100%;
+    }
+    .how-it-works__text h3 {
+      font-size: 1.5rem;
+      color: var(--color-dark);
+      margin-bottom: 16px;
+    }
+    .how-it-works__text p {
+      color: var(--color-gray-dark);
+      margin-bottom: 16px;
+    }
+    .check-list {
+      list-style: none;
+      margin-top: 24px;
+    }
+    .check-list li {
+      padding: 8px 0;
+      padding-left: 28px;
+      position: relative;
+      color: var(--color-gray-dark);
+      font-weight: 500;
+    }
+    .check-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--color-blue);
+      font-weight: 700;
+    }
+
+    /* FOR WHOM */
+    .for-whom {
+      padding: var(--section-pad);
+    }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-bottom: 80px;
+    }
+    .card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: var(--radius);
+      padding: 32px 24px;
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      border-color: var(--color-blue);
+      box-shadow: var(--shadow);
+      transform: translateY(-4px);
+    }
+    .card__icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: var(--color-dark);
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: var(--color-gray);
+    }
+    .product-showcase {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      background: var(--color-gray-light);
+      border-radius: 24px;
+      overflow: hidden;
+    }
+    .product-showcase__image img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+    .product-showcase__content {
+      padding: 40px 40px 40px 0;
+    }
+    .product-showcase__content h3 {
+      font-size: 1.6rem;
+      color: var(--color-dark);
+      margin-bottom: 16px;
+    }
+    .product-showcase__content p {
+      color: var(--color-gray-dark);
+      margin-bottom: 16px;
+    }
+
+    /* FEATURES */
+    .features {
+      padding: var(--section-pad);
+      background: var(--color-dark);
+    }
+    .features__inner {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .features__image img {
+      border-radius: var(--radius);
+      width: 100%;
+      object-fit: cover;
+    }
+    .features .section-title {
+      color: white;
+    }
+    .features__list {
+      list-style: none;
+      margin-top: 32px;
+    }
+    .features__list li {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .features__list li:last-child {
+      border-bottom: none;
+    }
+    .check-icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .features__list li div strong {
+      display: block;
+      color: white;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .features__list li div span {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* FAQ */
+    .faq {
+      padding: var(--section-pad);
+      background: var(--color-gray-light);
+    }
+    .faq__list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq__item {
+      background: white;
+      border-radius: var(--radius);
+      margin-bottom: 12px;
+      border: 1px solid #e5e7eb;
+      overflow: hidden;
+    }
+    .faq__item summary {
+      padding: 20px 24px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--color-dark);
+      list-style: none;
+      transition: background 0.2s;
+    }
+    .faq__item summary::-webkit-details-marker { display: none; }
+    .faq__item summary::after {
+      content: '+';
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--color-blue);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+    .faq__item[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq__item[open] summary {
+      background: rgba(33,150,243,0.04);
+    }
+    .faq__item p {
+      padding: 0 24px 20px;
+      color: var(--color-gray-dark);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* CONTACT */
+    .contact {
+      padding: var(--section-pad);
+      background: var(--color-dark-mid);
+    }
+    .contact__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .contact__direct {
+      margin-bottom: 32px;
+    }
+    .contact__email {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--color-blue-light);
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 8px;
+      text-decoration: underline;
+    }
+    .contact__image {
+      border-radius: var(--radius);
+      width: 100%;
+      max-height: 260px;
+      object-fit: cover;
+      margin-top: 32px;
+    }
+    .contact__form-wrap {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+    }
+    .contact__form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .form-group label {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--color-gray-dark);
+    }
+    .form-group input,
+    .form-group textarea {
+      padding: 12px 16px;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 10px;
+      font-family: var(--font);
+      font-size: 0.95rem;
+      color: var(--color-text);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--color-blue);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .form-success {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 10px;
+      padding: 16px;
+      color: #166534;
+      font-weight: 500;
+    }
+    .form-note {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--color-gray);
+      margin-top: -8px;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--color-dark);
+      color: rgba(255,255,255,0.7);
+      padding: 60px 0 32px;
+    }
+    .footer__inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+    .footer__brand img {
+      filter: brightness(0) invert(1);
+      margin-bottom: 16px;
+    }
+    .footer__brand p {
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+    .footer__brand strong {
+      color: white;
+    }
+    .footer__email {
+      color: var(--color-blue-light);
+      font-size: 0.9rem;
+    }
+    .footer__links h4 {
+      color: white;
+      font-size: 0.9rem;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .footer__links ul {
+      list-style: none;
+    }
+    .footer__links li {
+      margin-bottom: 8px;
+    }
+    .footer__links a {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.55);
+      transition: color 0.2s;
+    }
+    .footer__links a:hover {
+      color: white;
+    }
+    .footer__bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 0.85rem;
+    }
+    .footer__bottom a {
+      color: var(--color-blue-light);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .cards-grid { grid-template-columns: repeat(2, 1fr); }
+      .how-it-works__visual { grid-template-columns: 1fr; }
+      .features__inner { grid-template-columns: 1fr; }
+      .features__image { display: none; }
+    }
+
+    @media (max-width: 768px) {
+      .nav__links {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: var(--color-dark);
+        flex-direction: column;
+        padding: 24px;
+        gap: 16px;
+      }
+      .nav__links--open { display: flex; }
+      .nav__toggle { display: flex; }
+      .how-it-works__steps { flex-direction: column; }
+      .step__arrow { transform: rotate(90deg); }
+      .cards-grid { grid-template-columns: 1fr; }
+      .product-showcase { grid-template-columns: 1fr; }
+      .product-showcase__content { padding: 32px 24px; }
+      .contact__inner { grid-template-columns: 1fr; }
+      .footer__inner { grid-template-columns: 1fr; }
+      .footer__bottom { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .hero__stats { gap: 24px; }
+      .hero__actions { flex-direction: column; }
+      .contact__form-wrap { padding: 24px; }
+    }
+  </style>
+</BaseLayout>

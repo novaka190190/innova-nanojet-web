@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://innova-nanojet.cz/sitemap-index.xml
